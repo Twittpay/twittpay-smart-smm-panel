@@ -52,7 +52,7 @@ class twittpay extends MX_Controller
 
         // Gateway settings
         $this->api_key       = get_value($option, 'api_key');
-        $this->api_url       = get_value($option, 'api_url');
+        $this->api_url       = (trim((string) get_value($option, 'api_url')) !== '' ? trim((string) get_value($option, 'api_url')) : 'https://checkout.twittpay.com');
         $this->currency_rate = get_value($option, 'currency_rate');
 
         $this->load->library("twittpayapi");
@@ -73,7 +73,7 @@ class twittpay extends MX_Controller
             _validation('error', lang('invalid_amount'));
         }
 
-        if (!$this->api_key || !$this->api_url) {
+        if (!$this->api_key) {
             _validation('error', lang('payment_gateway_not_configured'));
         }
 
