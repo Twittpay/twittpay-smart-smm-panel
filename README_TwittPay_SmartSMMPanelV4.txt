@@ -24,9 +24,6 @@
       row to the `payments` table and touches nothing else.
    3. Admin -> Payments -> open "Bkash/Nagad/Rocket/Upay" and fill in:
 
-        Endpoint URL      your own gateway address, e.g.
-                          https://checkout.twittpay.com
-                          (the API host shown on your gateway's developer page)
 
         Brand Key           from your gateway dashboard, under Brands
 
@@ -58,8 +55,6 @@
      user gets is in your panel currency, exactly what they asked to deposit.
 
  WHAT TO WATCH
-   * The Endpoint URL is your API host. Pasting the whole endpoint or a trailing
-     /api is fine - only the scheme and host are used.
    * add_funds/twittpay/complete must be reachable from the internet. Your
      gateway's server calls it directly.
    * The transaction fee percentage is stored but not deducted, exactly as in the

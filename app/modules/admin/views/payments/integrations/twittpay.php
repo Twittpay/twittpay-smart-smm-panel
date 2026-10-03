@@ -1,11 +1,6 @@
 <?php
   $payment_elements = [
     [
-      'label'      => form_label('Endpoint URL'),
-      'element'    => form_input(['name' => "payment_params[option][api_url]", 'value' => @$payment_option->api_url, 'type' => 'text', 'class' => $class_element, 'placeholder' => 'https://checkout.twittpay.com']),
-      'class_main' => "col-md-12 col-sm-12 col-xs-12",
-    ],
-    [
       'label'      => form_label('Brand Key'),
       'element'    => form_input(['name' => "payment_params[option][api_key]", 'value' => @$payment_option->api_key, 'type' => 'text', 'class' => $class_element]),
       'class_main' => "col-md-12 col-sm-12 col-xs-12",

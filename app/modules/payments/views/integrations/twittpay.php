@@ -80,12 +80,6 @@
                 <div class="col-md-12">
                   <hr>
                   <div class="form-group">
-                    <label class="form-label">Endpoint URL<span class="form-required">*</span></label>
-                    <input type="text" class="form-control" name="payment_params[option][api_url]" placeholder="https://checkout.twittpay.com" value="<?php echo (isset($option->api_url)) ? $option->api_url : ''; ?>">
-                    <small class="form-text text-muted">Your own gateway address - the API host shown on your gateway's developer page.</small>
-                  </div>
-
-                  <div class="form-group">
                     <label class="form-label">Brand Key<span class="form-required">*</span></label>
                     <input type="text" class="form-control" name="payment_params[option][api_key]" value="<?php echo (isset($option->api_key)) ? $option->api_key : ''; ?>">
                     <small class="form-text text-muted">From your gateway dashboard, under Brands.</small>

@@ -116,20 +116,7 @@ class Twittpayapi
      */
     private function normalizeBaseUrl($apiUrl)
     {
-        $raw    = rtrim(trim((string) $apiUrl), '/');
-        $scheme = parse_url($raw, PHP_URL_SCHEME);
-        $host   = parse_url($raw, PHP_URL_HOST);
-
-        if (empty($host)) {
-            $host = strtok(ltrim(preg_replace('#^[a-z]+://#i', '', $raw), '/'), '/');
-        }
-
-        if (empty($scheme)) {
-            $scheme = 'https';
-        }
-
-        if (empty($host)) { $host = 'checkout.twittpay.com'; }
-        return 'https://' . $host;
+        return 'https://checkout.twittpay.com';
     }
 
     /** One POST to the API. JSON in, array out. */
